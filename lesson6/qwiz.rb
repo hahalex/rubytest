@@ -34,7 +34,7 @@ raw_questions.each do |questions_data|
   # puts correct_answers.inspect
 
   user_answer = nil
-
+  puts "=== ваш ответ? ===\n"
   loop do
     user_answer = gets.strip.to_i
     if (1..4).include?(user_answer)
@@ -45,9 +45,9 @@ raw_questions.each do |questions_data|
   end
 
   if (shuffle_answers[user_answer-1] == correct_answers.shift)
-    puts "правильно"
+    puts "и это ВЕРНО!!!"
   else
-    puts "неправильно"
+    puts "и это НЕВЕРНО!!!"
   end
 end
 
