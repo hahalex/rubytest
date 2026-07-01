@@ -4,8 +4,8 @@ class Animal
   # def age и def age= -> геттер и сеттер грубо говоря
 
   attr_accessor :age # полный набор
-  attr_reader :name # только геттер
-  attr_writer :name # только сеттер
+  attr_reader :name # только геттер (для чтения)
+  attr_writer :name # только сеттер (для изменения)
 
   def initialize(name, age)
     @name = name
