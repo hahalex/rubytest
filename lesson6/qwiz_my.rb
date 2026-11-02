@@ -26,7 +26,7 @@ all_questions = YAML.safe_load(File.read('questions.yaml'), symbolize_names: tru
 correct_answers = []
 raw_questions = all_questions.shuffle
 
-# брать каждый вопрос о очереди и предлагать 4 вараинат ответа
+# сохраняем верные ответы
 raw_questions.each do |questions_data|
   
   # puts questions_data[:answers].first.inspect
@@ -34,6 +34,7 @@ raw_questions.each do |questions_data|
 end
 # puts correct_answers.inspect
 
+# брать каждый вопрос о очереди и предлагать 4 вараинат ответа
 raw_questions.each do |questions_data|
   formatted_question = "\n=== #{questions_data[:question]} ===\n"
   puts formatted_question

@@ -7,7 +7,10 @@ animals = {
   "Курица" => "Фазановые",
 }
 
+
 animals = animals.to_a.shuffle.to_h
+
+a = puts "названия семейств #{animals.values.join(', ')}"
 
 animals.each do |animal, family|
   puts "#{animal} принадлежит к семейству..."

@@ -37,11 +37,11 @@ all_questions.shuffle.each do |questions_data|
   formatted_question,
   mode: 'a')
 
-  # тут хронится не буква, а текст ответа
+  # тут хранится не буква, а текст ответа
   correct_answer = questions_data[:answers].first
 
   # тот хэш который мы делаем
-  # очереднойэлемент массива (то есть очередной ответ из массива)
+  # очередной элемент массива (то есть очередной ответ из массива)
   # индекс этого ответа
   answers = questions_data[:answers].shuffle.each_with_index.inject({}) do |result, (answer, i)|
     # на каждой итерации мы выводим по 1 ответу и трансформируем в хэш все ответы
